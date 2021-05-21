@@ -1,0 +1,26 @@
+@import '../../assets/styles/global/colors';
+@import '../../assets/styles/global/utils';
+
+.cntr{
+    position: fixed;
+    top: 0;
+    display: flex;
+    width: 100%;
+    background-color: $base;
+    padding: 8px;
+}
+
+.logo{
+    color: $white;
+    font-weight: bold;
+    letter-spacing: toRem(4);
+}
+.loginCntr{
+    position: absolute;
+    right: 40px;
+    cursor: pointer;
+}
+
+.login{
+    color: $white;
+}
