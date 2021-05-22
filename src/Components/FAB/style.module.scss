@@ -1,0 +1,23 @@
+@import '../../assets/styles/global/colors';
+@import '../../assets/styles/global/utils';
+
+
+.cntr{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background: $primary;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+.icon{
+    font-size: toRem(18);
+}
