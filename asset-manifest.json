@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/sp-med/static/css/main.f77cf0e9.chunk.css",
+    "main.js": "/sp-med/static/js/main.2257ca28.chunk.js",
+    "main.js.map": "/sp-med/static/js/main.2257ca28.chunk.js.map",
+    "runtime-main.js": "/sp-med/static/js/runtime-main.93e8a9c8.js",
+    "runtime-main.js.map": "/sp-med/static/js/runtime-main.93e8a9c8.js.map",
+    "static/js/2.a668d233.chunk.js": "/sp-med/static/js/2.a668d233.chunk.js",
+    "static/js/2.a668d233.chunk.js.map": "/sp-med/static/js/2.a668d233.chunk.js.map",
+    "static/js/3.b3429fb6.chunk.js": "/sp-med/static/js/3.b3429fb6.chunk.js",
+    "static/js/3.b3429fb6.chunk.js.map": "/sp-med/static/js/3.b3429fb6.chunk.js.map",
+    "index.html": "/sp-med/index.html",
+    "static/css/main.f77cf0e9.chunk.css.map": "/sp-med/static/css/main.f77cf0e9.chunk.css.map",
+    "static/js/2.a668d233.chunk.js.LICENSE.txt": "/sp-med/static/js/2.a668d233.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.93e8a9c8.js",
+    "static/js/2.a668d233.chunk.js",
+    "static/css/main.f77cf0e9.chunk.css",
+    "static/js/main.2257ca28.chunk.js"
+  ]
+}
