@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/sp-med/static/css/main.f77cf0e9.chunk.css",
-    "main.js": "/sp-med/static/js/main.2257ca28.chunk.js",
-    "main.js.map": "/sp-med/static/js/main.2257ca28.chunk.js.map",
-    "runtime-main.js": "/sp-med/static/js/runtime-main.93e8a9c8.js",
-    "runtime-main.js.map": "/sp-med/static/js/runtime-main.93e8a9c8.js.map",
-    "static/js/2.a668d233.chunk.js": "/sp-med/static/js/2.a668d233.chunk.js",
-    "static/js/2.a668d233.chunk.js.map": "/sp-med/static/js/2.a668d233.chunk.js.map",
-    "static/js/3.b3429fb6.chunk.js": "/sp-med/static/js/3.b3429fb6.chunk.js",
-    "static/js/3.b3429fb6.chunk.js.map": "/sp-med/static/js/3.b3429fb6.chunk.js.map",
-    "index.html": "/sp-med/index.html",
-    "static/css/main.f77cf0e9.chunk.css.map": "/sp-med/static/css/main.f77cf0e9.chunk.css.map",
-    "static/js/2.a668d233.chunk.js.LICENSE.txt": "/sp-med/static/js/2.a668d233.chunk.js.LICENSE.txt"
+    "main.css": "/medical-app/static/css/main.3a26bf35.chunk.css",
+    "main.js": "/medical-app/static/js/main.e502813f.chunk.js",
+    "main.js.map": "/medical-app/static/js/main.e502813f.chunk.js.map",
+    "runtime-main.js": "/medical-app/static/js/runtime-main.1a80516b.js",
+    "runtime-main.js.map": "/medical-app/static/js/runtime-main.1a80516b.js.map",
+    "static/js/2.94c346c9.chunk.js": "/medical-app/static/js/2.94c346c9.chunk.js",
+    "static/js/2.94c346c9.chunk.js.map": "/medical-app/static/js/2.94c346c9.chunk.js.map",
+    "static/js/3.a4754f96.chunk.js": "/medical-app/static/js/3.a4754f96.chunk.js",
+    "static/js/3.a4754f96.chunk.js.map": "/medical-app/static/js/3.a4754f96.chunk.js.map",
+    "index.html": "/medical-app/index.html",
+    "static/css/main.3a26bf35.chunk.css.map": "/medical-app/static/css/main.3a26bf35.chunk.css.map",
+    "static/js/2.94c346c9.chunk.js.LICENSE.txt": "/medical-app/static/js/2.94c346c9.chunk.js.LICENSE.txt",
+    "static/media/login.module.scss": "/medical-app/static/media/bg.17243143.jpeg"
   },
   "entrypoints": [
-    "static/js/runtime-main.93e8a9c8.js",
-    "static/js/2.a668d233.chunk.js",
-    "static/css/main.f77cf0e9.chunk.css",
-    "static/js/main.2257ca28.chunk.js"
+    "static/js/runtime-main.1a80516b.js",
+    "static/js/2.94c346c9.chunk.js",
+    "static/css/main.3a26bf35.chunk.css",
+    "static/js/main.e502813f.chunk.js"
   ]
 }
