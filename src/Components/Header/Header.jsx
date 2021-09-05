@@ -2,7 +2,6 @@ import React from "react";
 import css from "./style.module.scss";
 
 const Header = () => {
-  console.log("css :>> ", css);
   return (
     <div className={css.cntr}>
       <p className={css.logo}>CLINIC NAME</p>

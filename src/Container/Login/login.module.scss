@@ -1,0 +1,61 @@
+@import "../../assets/styles/global/styles.scss";
+
+
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5) 100%),
+    url("../../assets/img/bg.jpeg");
+  background-repeat: repeat;
+ 
+  .loginDiv {
+    width: rem(480px);
+    background-color: $white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: rem(40px);
+    border-radius: rem(18px);
+
+    :global() {
+      input[type="text"] {
+        font-size: 18px !important;
+        font-weight: bold !important;
+        letter-spacing: 2px !important;
+      }
+    }
+
+    .loginButtons {
+      display: flex;
+      // padding-top: 12px;
+      button {
+        margin-right: 12px;
+      }
+    }
+    .nextBtn {
+      display: flex;
+      align-items: flex-end;
+    }
+    .or {
+      display: flex;
+      justify-content: flex-start;
+
+      p {
+        font-size: rem(12px);
+        text-transform: uppercase;
+        color: $grey;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .loginContainer {
+    align-items: flex-end;
+    .loginDiv {
+      border-radius: 0px;
+      border-top-left-radius: rem(12px);
+      border-top-right-radius: rem(12px);
+    }
+  }
+}
