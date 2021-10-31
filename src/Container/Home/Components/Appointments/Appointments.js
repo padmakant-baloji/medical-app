@@ -20,7 +20,7 @@ function createData(name, age, gender) {
 }
 
 const rows = [
-  createData("Pooja B", 28, "Male"),
+  createData("Swapnesh kore", 28, "Male"),
   createData("Ajay A", 28, "Male"),
   createData("Ramya", 20, "Female"),
   createData("Balu", 48, "Male"),
