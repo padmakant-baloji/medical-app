@@ -1,0 +1,11 @@
+@import "../../assets/styles/global/styles.scss";
+.list {
+  text-decoration: none;
+  color: inherit;
+  & > div {
+    padding: 8px 16px;
+  }
+}
+.appBar {
+  background-color: $base !important;
+}

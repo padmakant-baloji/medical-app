@@ -1,0 +1,13 @@
+@import "../../assets//styles/global/colors";
+.appointmentCntr {
+  height: 80vh;
+  overflow-y: auto;
+}
+.headingContainer {
+  position: relative;
+  .addAppointment {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}

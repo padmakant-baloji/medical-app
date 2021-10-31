@@ -1,0 +1,14 @@
+@import "../../assets/styles/global/styles.scss";
+.box {
+  //   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  .heading {
+    background-color: $primary;
+    padding: 20px;
+    color: $white;
+    letter-spacing: rem(2px);
+  }
+  .content {
+    padding: 20px 20px;
+    padding-bottom: 20px;
+  }
+}

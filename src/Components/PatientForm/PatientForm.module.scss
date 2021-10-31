@@ -1,0 +1,31 @@
+.patientContainer {
+  .patientDetails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .details {
+      display: flex;
+      justify-content: space-between;
+      flex-basis: 45%;
+    }
+
+    h3 {
+      text-transform: uppercase;
+
+      &:not(:last-child) {
+        margin-right: 24px;
+      }
+      //   text-decoration: underline;
+    }
+
+    .formControl {
+      margin: 8px;
+      min-width: 200px;
+    }
+    .selectEmpty {
+      margin-top: 16px;
+    }
+  }
+}
+.autoComplete {
+}

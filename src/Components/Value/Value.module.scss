@@ -1,0 +1,15 @@
+@import "../../assets/styles/global/styles.scss";
+.valueContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  .key {
+    color: $grey;
+    font-size: rem(12px);
+  }
+  .value {
+    color: $black;
+    font-weight: 500;
+    font-size: rem(16px);
+  }
+}
