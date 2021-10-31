@@ -1,7 +1,7 @@
 {
   "name": "med-app",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://padmakant-baloji.github.io/medical-app/",
   "dependencies": {
     "@emotion/react": "^11.5.0",

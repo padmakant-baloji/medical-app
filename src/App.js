@@ -30,7 +30,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Provider store={store}>
-        <Router>
+        <Router basename="/medical-app">
           {routes.map((route) => (
             <Route
               key={route.path}
