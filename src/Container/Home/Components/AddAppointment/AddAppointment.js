@@ -6,8 +6,8 @@ import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
-import Button from "@mui/material/Button";
 import css from "./AddAppointment.module.scss";
+import Button from "../../../../Components/Button/Button";
 
 const AddAppointment = ({ handleNewAppointment, data }) => {
   const [showOtherDetails, setShowOtherDetails] = useState(false);
@@ -97,7 +97,7 @@ const AddAppointment = ({ handleNewAppointment, data }) => {
             </Grid>
           </Grid>
           <div className={css.nextButton}>
-            <Button variant="contained">Submit</Button>
+            <Button label="Submit" />
           </div>
         </Fragment>
       )}

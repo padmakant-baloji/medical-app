@@ -1,4 +1,4 @@
-import { Grid } from "@material-ui/core";
+import { Grid } from "@mui/material";
 import React, { Fragment } from "react";
 import TextBox from "../../../Components/TextBox/TextBox";
 import css from "../login.module.scss";
@@ -7,7 +7,7 @@ import Button from "../../../Components/Button/Button";
 // import MailOutlineSharpIcon from "@material-ui/icons/MailOutlineSharp";
 // import PersonSharpIcon from "@material-ui/icons/PersonSharp";
 
-const Mobile = ({ handleInput, handleNext, value,error }) => (
+const Mobile = ({ handleInput, handleNext, value, error }) => (
   <Fragment>
     <Grid container spacing={3}>
       <Grid item sm={12} md={9} xs={12}>

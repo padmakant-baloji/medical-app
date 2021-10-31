@@ -1,4 +1,4 @@
-import { Grid, Button } from "@material-ui/core";
+import { Grid, Button } from "@mui/material";
 import React, { useState } from "react";
 import GroupAddIcon from "@mui/icons-material/GroupAdd";
 import { useSelector } from "react-redux";
