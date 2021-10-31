@@ -16,7 +16,7 @@ const Home = () => {
   useSelector((state) => {
     console.log(state);
   });
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
   const initialAppointmentValues = {
     name: "",
     age: "",
