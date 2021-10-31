@@ -102,7 +102,12 @@ export default function SideMenu({ children }) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
+          <Typography
+            variant="h6"
+            noWrap
+            component="div"
+            className={classes.clinicName}
+          >
             {clinicData.name}
           </Typography>
         </Toolbar>

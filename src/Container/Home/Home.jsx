@@ -1,5 +1,5 @@
 import { Grid, Button } from "@material-ui/core";
-import React from "react";
+import React, { useState } from "react";
 import GroupAddIcon from "@mui/icons-material/GroupAdd";
 import { useSelector } from "react-redux";
 import SideMenu from "../../Components/SideMenu/SideMenu";
@@ -9,11 +9,34 @@ import Appointments from "./Components/Appointments/Appointments";
 import Breadcrumb from "../../Components/Breadcrumb/Breadcrumb";
 import PatientForm from "../../Components/PatientForm/PatientForm";
 import Heading from "../../Components/Heading/Heading";
+import Modal from "../../Components/Modal/Modal";
+import AddAppointment from "./Components/AddAppointment/AddAppointment";
 
 const Home = () => {
   useSelector((state) => {
     console.log(state);
   });
+  const [open, setOpen] = React.useState(true);
+  const initialAppointmentValues = {
+    name: "",
+    age: "",
+    mobileNumber: "",
+    gender: "",
+  };
+  const [newAppointment, setNewAppointment] = useState({
+    ...initialAppointmentValues,
+  });
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => {
+    setOpen(false);
+    setNewAppointment({ ...initialAppointmentValues });
+  };
+  const handleNewAppointment = (e) => {
+    setNewAppointment({
+      ...newAppointment,
+      [e.target.name]: e.target.value,
+    });
+  };
   const breadCrumb = {
     list: [
       {
@@ -32,12 +55,13 @@ const Home = () => {
           <Heading level={1}>Todays Appointments</Heading>
           <div className={css.addAppointment}>
             <Button
-              variant="contained"
+              variant="outlined"
               color="primary"
               className={css.button}
               startIcon={<GroupAddIcon />}
+              onClick={handleOpen}
             >
-              Add Appointment
+              New Appointment
             </Button>
           </div>
         </div>
@@ -58,6 +82,12 @@ const Home = () => {
           </Grid>
         </Grid>
       </div>
+      <Modal heading="New Appointment" open={open} handleClose={handleClose}>
+        <AddAppointment
+          handleNewAppointment={handleNewAppointment}
+          data={newAppointment}
+        />
+      </Modal>
     </SideMenu>
   );
 };

@@ -8,4 +8,9 @@
 }
 .appBar {
   background-color: $base !important;
+  color: $white !important;
+}
+.clinicName {
+  padding-left: 28px;
+  text-transform: uppercase;
 }
