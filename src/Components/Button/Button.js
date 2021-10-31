@@ -1,12 +1,5 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
-
-// const theme = createTheme({
-//   palette: {
-//     primary: "#2196f3",
-//   },
-// });
 
 export default function CustomizedButtons({
   buttonType = "contained",

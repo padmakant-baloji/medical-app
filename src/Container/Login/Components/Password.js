@@ -1,5 +1,5 @@
 import { Grid } from "@material-ui/core";
-import React, { Fragment } from "react";
+import React from "react";
 import { Fade } from "react-animation-components";
 import TextBox from "../../../Components/TextBox/TextBox";
 import css from "../login.module.scss";
