@@ -44,21 +44,19 @@ export default function Appointments() {
   return (
     <TableContainer component={Paper} elevation={0}>
       <Table className={classes.table} aria-label="simple table">
-        <TableHead>
+        {/* <TableHead>
           <TableRow>
-            <TableCell align="left">Name</TableCell>
-            {/* <TableCell align="left">Age</TableCell> */}
-            {/* <TableCell align="left">Gender</TableCell> */}
+            <TableCell align="left"></TableCell>
             <TableCell align="left"></TableCell>
           </TableRow>
-        </TableHead>
+        </TableHead> */}
         <TableBody>
           {rows.map((row, index) => (
             <TableRow key={index}>
               <TableCell align="left">{row.name}</TableCell>
               {/* <TableCell align="left">{row.age}</TableCell> */}
               {/* <TableCell align="left">{row.gender}</TableCell> */}
-              <TableCell align="right">
+              <TableCell align="right" style={{ cursor: "pointer" }}>
                 <Icon color="primary">send</Icon>
               </TableCell>
             </TableRow>
