@@ -21,7 +21,7 @@ const style = {
   outline: "none",
 };
 
-const CustomModal = ({ open, handleClose, heading = "", children }) => {
+const CustomModal = ({ open, handleClose, heading = "", children, ...rest }) => {
   return (
     <Modal
       aria-labelledby="transition-modal-title"
@@ -33,6 +33,7 @@ const CustomModal = ({ open, handleClose, heading = "", children }) => {
       BackdropProps={{
         timeout: 500,
       }}
+      {...rest}
     >
       <Fade in={open}>
         <Box sx={style}>

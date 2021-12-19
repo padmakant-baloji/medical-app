@@ -29,3 +29,16 @@
 }
 .autoComplete {
 }
+
+.addTreatmentModal{
+  background-color: #fff;
+}
+.buttons{
+  display: flex;
+ button{
+  &:not(:last-child){
+    margin-right: 8px;
+  }
+ }
+ margin-bottom: 48px;
+}
