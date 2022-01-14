@@ -1,5 +1,5 @@
 import { Grid, Button } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import GroupAddIcon from "@mui/icons-material/GroupAdd";
 import { useSelector } from "react-redux";
 import moment from "moment";
@@ -36,13 +36,13 @@ const Home = () => {
     appointmentObj
   );
 
-  const setSelectedAppointmentObj = (appointmentId) => {
+  const setSelectedAppointmentObj = useCallback((appointmentId) => {
     const selectedAppointment = appointments?.data?.find(
       (x) => x.id === appointmentId
     );
 
     setAppointmentObj(selectedAppointment);
-  };
+  });
 
   const [appointments, setAppointments] = useState({});
   const getAppointMentData = () => {
@@ -68,9 +68,12 @@ const Home = () => {
     if (localData?.data?.length > 0) {
       const id = localData?.data[0].id;
       setSelectedAppointmentId(id);
-      setSelectedAppointmentObj(id);
     }
   }, []);
+
+  useEffect(() => {
+    setSelectedAppointmentObj(selectedAppointmentId);
+  }, [selectedAppointmentId, setSelectedAppointmentObj]);
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => {
