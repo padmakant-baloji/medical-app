@@ -18,7 +18,11 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Appointments({ handleOpen, appointments }) {
+export default function Appointments({
+  handleOpen,
+  appointments,
+  handleAppintmentClick,
+}) {
   const classes = useStyles();
 
   const formatDate = (date) => {
@@ -37,11 +41,11 @@ export default function Appointments({ handleOpen, appointments }) {
         <TableBody>
           {appointments?.data?.length ? (
             appointments?.data?.map((row, index) => (
-              <TableRow key={index}>
+              <TableRow onClick={() => handleAppintmentClick(row)}>
                 <TableCell align="left">
                   <div className={css.details}>
                     <div>{row.name}</div>
-                    <div className={css.date} >{formatDate(row?.date)}</div>
+                    <div className={css.date}>{formatDate(row?.date)}</div>
                   </div>
                 </TableCell>
               </TableRow>

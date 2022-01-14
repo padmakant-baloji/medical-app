@@ -2,7 +2,8 @@ import { Grid, Button } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import GroupAddIcon from "@mui/icons-material/GroupAdd";
 import { useSelector } from "react-redux";
-import moment from 'moment';
+import moment from "moment";
+import { v1 as uuid } from "uuid";
 import SideMenu from "../../Components/SideMenu/SideMenu";
 import css from "./Home.module.scss";
 import Box from "../../Components/Box/Box";
@@ -23,11 +24,25 @@ const Home = () => {
     age: "",
     mobileNumber: "",
     gender: "",
-    date: moment()
   };
   const [newAppointment, setNewAppointment] = useState({
     ...initialAppointmentValues,
   });
+
+  const [selectedAppointmentId, setSelectedAppointmentId] = useState(null);
+  const [appointmentObj, setAppointmentObj] = useState({});
+  console.log(
+    "🚀 ~ file: Home.jsx ~ line 34 ~ Home ~ appointmentObj",
+    appointmentObj
+  );
+
+  const setSelectedAppointmentObj = (appointmentId) => {
+    const selectedAppointment = appointments?.data?.find(
+      (x) => x.id === appointmentId
+    );
+
+    setAppointmentObj(selectedAppointment);
+  };
 
   const [appointments, setAppointments] = useState({});
   const getAppointMentData = () => {
@@ -42,9 +57,19 @@ const Home = () => {
     localStorage.setItem("appointments", JSON.stringify(data));
   };
 
+  const handleAppintmentClick = (data) => {
+    setSelectedAppointmentId(data.id);
+    setSelectedAppointmentObj(data.id);
+  };
+
   useEffect(() => {
     const localData = getAppointMentData();
     setAppointments(localData);
+    if (localData?.data?.length > 0) {
+      const id = localData?.data[0].id;
+      setSelectedAppointmentId(id);
+      setSelectedAppointmentObj(id);
+    }
   }, []);
 
   const handleOpen = () => setOpen(true);
@@ -61,20 +86,23 @@ const Home = () => {
 
   const handleAddAppointment = () => {
     const localData = getAppointMentData();
+    const newAppointmentData = {
+      ...newAppointment,
+      date: moment(),
+      id: uuid(),
+    };
 
-
-
-    let newData = {...localData};
+    let newData = { ...localData };
     if (localData?.data?.length > 0) {
       newData = {
-        data: [...localData.data, { ...newAppointment }],
+        data: [...localData.data, { ...newAppointmentData }],
       };
     } else {
       newData = {
-        data: [{ ...newAppointment }],
+        data: [{ ...newAppointmentData }],
       };
     }
-    setOpen(false)
+    setOpen(false);
     setAppointments(newData);
     setAppointMentsData(newData);
   };
@@ -87,6 +115,7 @@ const Home = () => {
     ],
     current: "Appointment",
   };
+
   return (
     <SideMenu>
       <Breadcrumb data={breadCrumb} />
@@ -113,6 +142,7 @@ const Home = () => {
                 <Appointments
                   handleOpen={handleOpen}
                   appointments={appointments}
+                  handleAppintmentClick={handleAppintmentClick}
                 />
               </div>
             </Box>
@@ -120,7 +150,7 @@ const Home = () => {
           <Grid item md={9}>
             <Box heading="">
               <div className={css.appointmentCntr}>
-                <PatientForm />
+                <PatientForm selectedAppointment={appointmentObj} />
               </div>
             </Box>
           </Grid>
