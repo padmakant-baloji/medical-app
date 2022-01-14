@@ -146,6 +146,7 @@ const Home = () => {
                   handleOpen={handleOpen}
                   appointments={appointments}
                   handleAppintmentClick={handleAppintmentClick}
+                  selectedAppointmentId={selectedAppointmentId}
                 />
               </div>
             </Box>

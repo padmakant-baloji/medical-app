@@ -1,15 +1,35 @@
+@import "../../../../assets/styles/global/colors";
+
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.details {
-  color: grey;
-  .date {
-    font-size: 8px;
-  }
 
-  .name{
-      
+.row {
+  color: $grey;
+  cursor: pointer;
+  .details {
+    color: $grey;
+    .date {
+      font-size: 8px;
+    }
+
+    .name {
+    }
+  }
+}
+.selected {
+  background-color: $primary;
+
+  .details {
+    color: $white;
+    font-weight: bold;
+    .date {
+      font-size: 8px;
+    }
+
+    .name {
+    }
   }
 }

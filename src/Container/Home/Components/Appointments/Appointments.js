@@ -22,6 +22,7 @@ export default function Appointments({
   handleOpen,
   appointments,
   handleAppintmentClick,
+  selectedAppointmentId,
 }) {
   const classes = useStyles();
 
@@ -42,8 +43,13 @@ export default function Appointments({
           {appointments?.data?.length ? (
             appointments?.data?.map((row, index) => (
               <TableRow onClick={() => handleAppintmentClick(row)}>
-                <TableCell align="left">
-                  <div className={css.details}>
+                <TableCell
+                  className={`${css.row} ${
+                    row.id === selectedAppointmentId ? css.selected : ""
+                  }`}
+                  align="left"
+                >
+                  <div className={`${css.details}`}>
                     <div>{row.name}</div>
                     <div className={css.date}>{formatDate(row?.date)}</div>
                   </div>
