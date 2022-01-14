@@ -3,12 +3,12 @@ import Login from '../Container/Login/Login';
 
 const route = [
     {
-        path: '/',
+        path: '/home',
         comp: Home,
         exact: true
     },
     {
-        path: '/login',
+        path: '/',
         comp: Login,
         exact: true
     }

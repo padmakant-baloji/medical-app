@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { makeStyles } from "@mui/styles";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -7,7 +7,10 @@ import TableContainer from "@mui/material/TableContainer";
 // import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import { Icon } from "@mui/material";
+// import { Icon } from "@mui/material";
+import Button from "../../../../Components/Button/Button";
+import css from "./Appointment.module.scss";
+import moment from "moment";
 
 const useStyles = makeStyles({
   table: {
@@ -15,31 +18,12 @@ const useStyles = makeStyles({
   },
 });
 
-function createData(name, age, gender) {
-  return { name, age, gender };
-}
-
-const rows = [
-  createData("Swapnesh kore", 28, "Male"),
-  createData("Ajay A", 28, "Male"),
-  createData("Ramya", 20, "Female"),
-  createData("Balu", 48, "Male"),
-  createData("Swapnesh Kore", 28, "Male"),
-  createData("Ajay A", 28, "Male"),
-  createData("Ramya", 20, "Female"),
-  createData("Balu", 48, "Male"),
-  createData("Swapnesh Kore", 28, "Male"),
-  createData("Ajay A", 28, "Male"),
-  createData("Ramya", 20, "Female"),
-  createData("Balu", 48, "Male"),
-  createData("Swapnesh Kore", 28, "Male"),
-  createData("Ajay A", 28, "Male"),
-  createData("Ramya", 20, "Female"),
-  createData("Balu", 48, "Male"),
-];
-
-export default function Appointments() {
+export default function Appointments({ handleOpen, appointments }) {
   const classes = useStyles();
+
+  const formatDate = (date) => {
+    return date ? moment(date).format("DD/MM/YYYY - hh:mm a") : "-";
+  };
 
   return (
     <TableContainer component={Paper} elevation={0}>
@@ -51,16 +35,24 @@ export default function Appointments() {
           </TableRow>
         </TableHead> */}
         <TableBody>
-          {rows.map((row, index) => (
-            <TableRow key={index}>
-              <TableCell align="left">{row.name}</TableCell>
-              {/* <TableCell align="left">{row.age}</TableCell> */}
-              {/* <TableCell align="left">{row.gender}</TableCell> */}
-              <TableCell align="right" style={{ cursor: "pointer" }}>
-                <Icon color="primary">send</Icon>
+          {appointments?.data?.length ? (
+            appointments?.data?.map((row, index) => (
+              <TableRow key={index}>
+                <TableCell align="left">
+                  <div className={css.details}>
+                    <div>{row.name}</div>
+                    <div className={css.date} >{formatDate(row?.date)}</div>
+                  </div>
+                </TableCell>
+              </TableRow>
+            ))
+          ) : (
+            <TableRow className={css.center}>
+              <TableCell>
+                <Button onClick={handleOpen} label="New Appointment" />
               </TableCell>
             </TableRow>
-          ))}
+          )}
         </TableBody>
       </Table>
     </TableContainer>

@@ -1,7 +1,8 @@
 import { Grid, Button } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import GroupAddIcon from "@mui/icons-material/GroupAdd";
 import { useSelector } from "react-redux";
+import moment from 'moment';
 import SideMenu from "../../Components/SideMenu/SideMenu";
 import css from "./Home.module.scss";
 import Box from "../../Components/Box/Box";
@@ -22,10 +23,30 @@ const Home = () => {
     age: "",
     mobileNumber: "",
     gender: "",
+    date: moment()
   };
   const [newAppointment, setNewAppointment] = useState({
     ...initialAppointmentValues,
   });
+
+  const [appointments, setAppointments] = useState({});
+  const getAppointMentData = () => {
+    const appointments = localStorage.getItem("appointments");
+    if (appointments) {
+      return JSON.parse(appointments);
+    }
+    return [];
+  };
+
+  const setAppointMentsData = (data) => {
+    localStorage.setItem("appointments", JSON.stringify(data));
+  };
+
+  useEffect(() => {
+    const localData = getAppointMentData();
+    setAppointments(localData);
+  }, []);
+
   const handleOpen = () => setOpen(true);
   const handleClose = () => {
     setOpen(false);
@@ -36,6 +57,26 @@ const Home = () => {
       ...newAppointment,
       [e.target.name]: e.target.value,
     });
+  };
+
+  const handleAddAppointment = () => {
+    const localData = getAppointMentData();
+
+
+
+    let newData = {...localData};
+    if (localData?.data?.length > 0) {
+      newData = {
+        data: [...localData.data, { ...newAppointment }],
+      };
+    } else {
+      newData = {
+        data: [{ ...newAppointment }],
+      };
+    }
+    setOpen(false)
+    setAppointments(newData);
+    setAppointMentsData(newData);
   };
   const breadCrumb = {
     list: [
@@ -69,7 +110,10 @@ const Home = () => {
           <Grid item md={3}>
             <Box heading="">
               <div className={css.appointmentCntr}>
-                <Appointments />
+                <Appointments
+                  handleOpen={handleOpen}
+                  appointments={appointments}
+                />
               </div>
             </Box>
           </Grid>
@@ -86,6 +130,7 @@ const Home = () => {
         <AddAppointment
           handleNewAppointment={handleNewAppointment}
           data={newAppointment}
+          handleAddAppointment={handleAddAppointment}
         />
       </Modal>
     </SideMenu>

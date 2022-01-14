@@ -9,7 +9,7 @@ import FormLabel from "@mui/material/FormLabel";
 import css from "./AddAppointment.module.scss";
 import Button from "../../../../Components/Button/Button";
 
-const AddAppointment = ({ handleNewAppointment, data }) => {
+const AddAppointment = ({ handleNewAppointment, data, handleAddAppointment }) => {
   const [showOtherDetails, setShowOtherDetails] = useState(false);
   const [loader, setLoader] = useState(false);
   useEffect(() => {
@@ -97,7 +97,7 @@ const AddAppointment = ({ handleNewAppointment, data }) => {
             </Grid>
           </Grid>
           <div className={css.nextButton}>
-            <Button label="Submit" />
+            <Button onClick={handleAddAppointment} label="Submit" />
           </div>
         </Fragment>
       )}
