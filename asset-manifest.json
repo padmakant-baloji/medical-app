@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/medical-app/static/css/main.5f88b90c.chunk.css",
-    "main.js": "/medical-app/static/js/main.464494ba.chunk.js",
-    "main.js.map": "/medical-app/static/js/main.464494ba.chunk.js.map",
-    "runtime-main.js": "/medical-app/static/js/runtime-main.19ffd5e9.js",
-    "runtime-main.js.map": "/medical-app/static/js/runtime-main.19ffd5e9.js.map",
+    "main.css": "/medical-app/static/css/main.1cea98e6.chunk.css",
+    "main.js": "/medical-app/static/js/main.6d648ada.chunk.js",
+    "main.js.map": "/medical-app/static/js/main.6d648ada.chunk.js.map",
+    "runtime-main.js": "/medical-app/static/js/runtime-main.15a2d530.js",
+    "runtime-main.js.map": "/medical-app/static/js/runtime-main.15a2d530.js.map",
     "static/css/2.15f8111a.chunk.css": "/medical-app/static/css/2.15f8111a.chunk.css",
-    "static/js/2.e4a8c639.chunk.js": "/medical-app/static/js/2.e4a8c639.chunk.js",
-    "static/js/2.e4a8c639.chunk.js.map": "/medical-app/static/js/2.e4a8c639.chunk.js.map",
-    "static/js/3.93ae172e.chunk.js": "/medical-app/static/js/3.93ae172e.chunk.js",
-    "static/js/3.93ae172e.chunk.js.map": "/medical-app/static/js/3.93ae172e.chunk.js.map",
+    "static/js/2.b7f3409b.chunk.js": "/medical-app/static/js/2.b7f3409b.chunk.js",
+    "static/js/2.b7f3409b.chunk.js.map": "/medical-app/static/js/2.b7f3409b.chunk.js.map",
+    "static/js/3.ba35f9ec.chunk.js": "/medical-app/static/js/3.ba35f9ec.chunk.js",
+    "static/js/3.ba35f9ec.chunk.js.map": "/medical-app/static/js/3.ba35f9ec.chunk.js.map",
     "index.html": "/medical-app/index.html",
     "static/css/2.15f8111a.chunk.css.map": "/medical-app/static/css/2.15f8111a.chunk.css.map",
-    "static/css/main.5f88b90c.chunk.css.map": "/medical-app/static/css/main.5f88b90c.chunk.css.map",
-    "static/js/2.e4a8c639.chunk.js.LICENSE.txt": "/medical-app/static/js/2.e4a8c639.chunk.js.LICENSE.txt",
+    "static/css/main.1cea98e6.chunk.css.map": "/medical-app/static/css/main.1cea98e6.chunk.css.map",
+    "static/js/2.b7f3409b.chunk.js.LICENSE.txt": "/medical-app/static/js/2.b7f3409b.chunk.js.LICENSE.txt",
     "static/media/login.module.scss": "/medical-app/static/media/bg.17243143.jpeg"
   },
   "entrypoints": [
-    "static/js/runtime-main.19ffd5e9.js",
+    "static/js/runtime-main.15a2d530.js",
     "static/css/2.15f8111a.chunk.css",
-    "static/js/2.e4a8c639.chunk.js",
-    "static/css/main.5f88b90c.chunk.css",
-    "static/js/main.464494ba.chunk.js"
+    "static/js/2.b7f3409b.chunk.js",
+    "static/css/main.1cea98e6.chunk.css",
+    "static/js/main.6d648ada.chunk.js"
   ]
 }
