@@ -2,9 +2,10 @@
   margin-bottom: 28px;
 }
 .loader {
-  display: flex;
-  align-items: flex-end;
-  padding-bottom: 4px;
+  position: absolute;
+  top: 45%;
+  left: 45%;
+
 }
 .radioContainer {
   padding-left: 8px;

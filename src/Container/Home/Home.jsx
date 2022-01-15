@@ -31,10 +31,7 @@ const Home = () => {
 
   const [selectedAppointmentId, setSelectedAppointmentId] = useState(null);
   const [appointmentObj, setAppointmentObj] = useState({});
-  console.log(
-    "🚀 ~ file: Home.jsx ~ line 34 ~ Home ~ appointmentObj",
-    appointmentObj
-  );
+
 
   const setSelectedAppointmentObj = useCallback((appointmentId) => {
     const selectedAppointment = appointments?.data?.find(
@@ -104,8 +101,9 @@ const Home = () => {
       newData = {
         data: [{ ...newAppointmentData }],
       };
+      setSelectedAppointmentId(newAppointmentData.id);
     }
-    setOpen(false);
+    handleClose();
     setAppointments(newData);
     setAppointMentsData(newData);
   };

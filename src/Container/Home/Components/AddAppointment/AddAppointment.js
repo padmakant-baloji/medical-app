@@ -6,10 +6,15 @@ import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
+import CircularProgress from "@mui/material/CircularProgress";
 import css from "./AddAppointment.module.scss";
 import Button from "../../../../Components/Button/Button";
 
-const AddAppointment = ({ handleNewAppointment, data, handleAddAppointment }) => {
+const AddAppointment = ({
+  handleNewAppointment,
+  data,
+  handleAddAppointment,
+}) => {
   const [showOtherDetails, setShowOtherDetails] = useState(false);
   const [loader, setLoader] = useState(false);
   useEffect(() => {
@@ -37,7 +42,12 @@ const AddAppointment = ({ handleNewAppointment, data, handleAddAppointment }) =>
             disabled={loader}
           />
         </Grid>
-        {loader && <div className={css.loader}>Loading...</div>}
+        {loader && (
+          <div className={css.loader}>
+            {" "}
+            <CircularProgress color="success" />
+          </div>
+        )}
       </Grid>
       {showOtherDetails && (
         <Fragment>
